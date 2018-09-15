@@ -25,7 +25,7 @@ bot.on("message", async message => {
 	if (!msg.startsWith(prefix)) return;
 
 	try {
-		let commandFile = require(`./command/${cmd}.js`);
+		let commandFile = require(`./cmds/${cmd}.js`);
 		commandFile.run(bot, message, args);
 	}catch (e) {
 		console.log(e.message)
